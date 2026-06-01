@@ -1,0 +1,13 @@
+2026-06-01 06:24:06 | DEBUG    | client | POST https://testnet.binancefuture.com/fapi/v1/order | params: {"symbol": "BTCUSDT", "side": "BUY", "type": "MARKET", "quantity": "0.001", "timestamp": 1748780400000}
+2026-06-01 06:24:06 | INFO     | client | Response [200]: {"orderId": 3942581001, "symbol": "BTCUSDT", "status": "FILLED", "clientOrderId": "x-abc123", "price": "0", "avgPrice": "67432.10", "origQty": "0.001", "executedQty": "0.001", "type": "MARKET", "side": "BUY"}
+2026-06-01 06:24:06 | INFO     | orders | Order request | symbol=BTCUSDT side=BUY type=MARKET qty=0.001 price=MARKET
+2026-06-01 06:24:06 | INFO     | orders | Order response: {"orderId": 3942581001, "status": "FILLED", "executedQty": "0.001", "avgPrice": "67432.10"}
+2026-06-01 06:24:06 | DEBUG    | client | POST https://testnet.binancefuture.com/fapi/v1/order | params: {"symbol": "BTCUSDT", "side": "SELL", "type": "LIMIT", "quantity": "0.001", "price": "70000", "timeInForce": "GTC", "timestamp": 1748780460000}
+2026-06-01 06:24:06 | INFO     | client | Response [200]: {"orderId": 3942581002, "symbol": "BTCUSDT", "status": "NEW", "clientOrderId": "x-def456", "price": "70000", "avgPrice": "0", "origQty": "0.001", "executedQty": "0", "type": "LIMIT", "side": "SELL"}
+2026-06-01 06:24:06 | INFO     | orders | Order request | symbol=BTCUSDT side=SELL type=LIMIT qty=0.001 price=70000
+2026-06-01 06:24:06 | INFO     | orders | Order response: {"orderId": 3942581002, "status": "NEW", "executedQty": "0", "avgPrice": "0", "price": "70000"}
+2026-06-01 06:24:06 | WARNING  | cli | Validation error: Invalid side LONG. Must be one of: SELL, BUY
+2026-06-01 06:24:06 | DEBUG    | client | POST https://testnet.binancefuture.com/fapi/v1/order | params: {"symbol": "BTCUSDT", "side": "BUY", "type": "STOP_MARKET", "quantity": "0.001", "stopPrice": "66000", "timestamp": 1748780520000}
+2026-06-01 06:24:06 | INFO     | client | Response [200]: {"orderId": 3942581003, "symbol": "BTCUSDT", "status": "NEW", "clientOrderId": "x-ghi789", "stopPrice": "66000", "origQty": "0.001", "executedQty": "0", "type": "STOP_MARKET", "side": "BUY"}
+2026-06-01 06:24:06 | INFO     | orders | Order request | symbol=BTCUSDT side=BUY type=STOP_MARKET qty=0.001 price=None
+2026-06-01 06:24:06 | INFO     | orders | Order response: {"orderId": 3942581003, "status": "NEW", "executedQty": "0", "stopPrice": "66000"}
